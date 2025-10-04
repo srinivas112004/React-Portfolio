@@ -12,42 +12,79 @@ export default function Skills() {
     {
       title: 'Programming Languages',
       icon: Code,
-      skills: ['Python', 'C', 'Java', 'PHP', 'HTML', 'TypeScript', 'JavaScript'],
+      skills: [
+        { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+        { name: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg' },
+        { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+        { name: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+        { name: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+        { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' }
+      ],
       color: 'from-blue-500 to-cyan-500',
       proficiency: 90
     },
     {
       title: 'Frameworks & Libraries',
       icon: Wrench,
-      skills: ['React.js', 'Next.js', 'Node.js', 'Django', 'Flask', 'TailwindCSS', 'Git'],
+      skills: [
+        { name: 'React.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+        { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'Django', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
+        { name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
+        { name: 'TailwindCSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+        { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' }
+      ],
       color: 'from-purple-500 to-pink-500',
       proficiency: 85
     },
     {
       title: 'AI/ML & Data Science',
       icon: Brain,
-      skills: ['Machine Learning', 'NLP', 'Generative AI', 'LLMs', 'TensorFlow', 'PyTorch'],
+      skills: [
+        { name: 'Machine Learning', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg' },
+        { name: 'NLP', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/88/SpaCy_logo.svg' },
+        { name: 'Generative AI', logo: 'https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg' },
+        { name: 'LLMs', logo: 'https://static-00.iconduck.com/assets.00/openai-icon-2021x2048-4rpe5x7n.png' },
+        { name: 'TensorFlow', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+        { name: 'PyTorch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' }
+      ],
       color: 'from-emerald-500 to-teal-500',
       proficiency: 80
     },
     {
       title: 'Databases',
       icon: Database,
-      skills: ['MySQL', 'SQLite', 'MongoDB', 'PostgreSQL'],
+      skills: [
+        { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'SQLite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg' },
+        { name: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
+      ],
       color: 'from-orange-500 to-red-500',
       proficiency: 75
     },
     {
       title: 'Cloud & DevOps',
       icon: Cloud,
-      skills: ['AWS', 'Google Cloud'],
+      skills: [
+        { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+        { name: 'Google Cloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg' }
+      ],
       color: 'from-indigo-500 to-purple-500',
       proficiency: 50
     },
     {
       title: 'Computer Science',
       icon: BookOpen,
-      skills: ['DSA', 'DBMS', 'OS', 'Computer Networks', 'Algorithms'],
+      skills: [
+        { name: 'DSA', logo: 'https://cdn-icons-png.flaticon.com/512/1087/1087815.png' },
+        { name: 'DBMS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'OS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
+        { name: 'Computer Networks', logo: 'https://cdn-icons-png.flaticon.com/512/4727/4727266.png' },
+        { name: 'Algorithms', logo: 'https://cdn-icons-png.flaticon.com/512/2103/2103658.png' }
+      ],
       color: 'from-yellow-500 to-orange-500',
       proficiency: 88
     },
@@ -152,9 +189,9 @@ export default function Skills() {
                 
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <span
+                    <div
                       key={skillIndex}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium border transition-all duration-300 cursor-default transform ${
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium border transition-all duration-300 cursor-default transform ${
                         theme === 'dark' 
                           ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border-gray-700 hover:border-gray-600' 
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 border-gray-300 hover:border-gray-400'
@@ -166,8 +203,17 @@ export default function Skills() {
                         animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms` 
                       }}
                     >
-                      {skill}
-                    </span>
+                      <img 
+                        src={skill.logo} 
+                        alt={`${skill.name} logo`}
+                        className="w-5 h-5 object-contain"
+                        onError={(e) => {
+                          // Fallback if image fails to load
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                      <span>{skill.name}</span>
+                    </div>
                   ))}
                 </div>
               </div>

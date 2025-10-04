@@ -103,8 +103,8 @@ export default function Hero() {
               <p className={`text-lg mb-8 leading-relaxed max-w-xl animate-fade-in-delay-4 ${
                 theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
               }`}>
-                Passionate about creating intelligent solutions through AI/ML and building 
-                seamless full-stack applications. Let's build something amazing together.
+                Passionate about creating intelligent solutions through AI/ML and building seamless full-stack applications.
+                 Always exploring, always innovating — let’s build something amazing together
               </p>
               
               <div className={`flex items-center mb-8 animate-fade-in-delay-4 ${
