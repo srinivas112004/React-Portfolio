@@ -13,7 +13,7 @@ export default function Projects() {
       description: 'Advanced AI-powered tool that automatically reviews code quality and performs comprehensive security audits. Identifies vulnerabilities, suggests improvements, and ensures coding best practices.',
       image: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800',
       tags: ['AI', 'Python', 'Code Review', 'Security', 'LLMs', 'DevOps'],
-      period: 'Oct 2025 – Present',
+      period: 'Aug 2025 – Present',
       github: 'https://github.com/srinivas112004/AI-Code-Reviewer-And-Security-Auditor-Agent',
       demo: '',
       status: 'Developing',
