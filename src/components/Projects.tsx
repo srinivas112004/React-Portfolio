@@ -9,6 +9,18 @@ export default function Projects() {
 
   const projects = [
     {
+      title: 'AI Code Reviewer & Security Auditor Agent',
+      description: 'Advanced AI-powered tool that automatically reviews code quality and performs comprehensive security audits. Identifies vulnerabilities, suggests improvements, and ensures coding best practices.',
+      image: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800',
+      tags: ['AI', 'Python', 'Code Review', 'Security', 'LLMs', 'DevOps'],
+      period: 'Oct 2025 – Present',
+      github: 'https://github.com/srinivas112004/AI-Code-Reviewer-And-Security-Auditor-Agent',
+      demo: '',
+      status: 'Developing',
+      featured: true,
+      category: 'AI/ML & Full Stack'
+    },
+    {
       title: 'Face Recognition Smart Attendance',
       description: 'Automated attendance system using real-time face recognition. Captures video, recognizes faces, and stores attendance records in a database with high accuracy.',
       image: 'https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -28,7 +40,7 @@ export default function Projects() {
       period: 'Aug 2025 – Sep 2025',
       github: 'https://github.com/srinivas112004/Api-Response-Explainer',
       demo: 'https://github.com/srinivas112004/Api-Response-Explainer',
-      status: 'Live',
+      status: 'Completed',
       featured: true,
       category: 'Web Development'
     },
@@ -52,7 +64,7 @@ export default function Projects() {
       period: 'Aug 2025 – Sep 2025',
       github: 'https://github.com/srinivas112004/Travel-Booking-System-Django',
       demo: 'https://srinivas07.pythonanywhere.com',
-      status: 'Deployed',
+      status: 'Live',
       featured: false,
       category: 'Full Stack'
     },
@@ -184,19 +196,21 @@ export default function Projects() {
                     >
                       <Github className="w-5 h-5 text-white" />
                     </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/btn bg-blue-500/20 backdrop-blur-sm p-3 rounded-full hover:bg-blue-500/30 transition-all duration-300 border border-blue-500/30 hover:scale-110 cursor-pointer"
-                      title="View Live Demo"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(project.demo, '_blank');
-                      }}
-                    >
-                      <ExternalLink className="w-5 h-5 text-blue-300" />
-                    </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/btn bg-blue-500/20 backdrop-blur-sm p-3 rounded-full hover:bg-blue-500/30 transition-all duration-300 border border-blue-500/30 hover:scale-110 cursor-pointer"
+                        title="View Live Demo"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.demo, '_blank');
+                        }}
+                      >
+                        <ExternalLink className="w-5 h-5 text-blue-300" />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -212,12 +226,23 @@ export default function Projects() {
                   <h3 className={`text-xl font-semibold group-hover:text-blue-300 transition-colors duration-300 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {project.title}
                   </h3>
-                  <div className={`px-2 py-1 rounded-full text-xs font-medium transition-all duration-300 ${
+                  <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
                     project.status === 'Live' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' :
                     project.status === 'Deployed' ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' :
+                    project.status === 'Developing' ? 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/20' :
+                    project.status === 'Completed' ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' :
                     'bg-gray-600/10 text-gray-400 border border-gray-600/20'
                   } ${hoveredProject === index ? 'scale-110' : ''}`}>
-                    {project.status}
+                    {project.status === 'Developing' && (
+                      <div className="flex space-x-1 mr-2">
+                        <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-bounce"></div>
+                        <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                      </div>
+                    )}
+                    <span className={project.status === 'Developing' ? 'text-yellow-400 font-semibold' : ''}>
+                      {project.status}
+                    </span>
                   </div>
                 </div>
 

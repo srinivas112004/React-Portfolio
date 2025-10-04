@@ -16,7 +16,7 @@ export default function Resume() {
       icon: Briefcase,
       title: 'Experience',
       description: 'AI & Tech Decentralized Intern',
-      detail: 'BlockseBlock (OpenxAI)',
+      detail: 'BlockseBlock in collaboration with (OpenxAI)',
       color: 'from-purple-500 to-pink-500'
     },
     {

@@ -6,7 +6,7 @@ export default function Experience() {
   const experience = [
     {
       title: 'AI & Tech Decentralized Intern',
-      company: 'BlockseBlock (OpenxAI)',
+      company: 'BlockseBlock in collaboration with (OpenxAI)',
       logo: '/blockseblock_logo.jpeg',
       website: 'https://blockseblock.com',
       period: 'Aug 2025 – Sep 2025',
@@ -90,7 +90,14 @@ export default function Experience() {
                     )}
                     <div>
                       <h3 className={`text-2xl md:text-3xl font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{exp.title}</h3>
-                      <p className="text-xl text-blue-400 font-semibold mb-1">{exp.company}</p>
+                      <a 
+                        href={exp.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xl text-blue-400 font-semibold block mb-3 hover:text-blue-300 transition-colors duration-300 cursor-pointer hover:underline"
+                      >
+                        {exp.company}
+                      </a>
                       <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                         <Award className="w-4 h-4 text-emerald-400 mr-2" />
                         <span className="text-emerald-400 text-sm font-medium">{exp.type}</span>
