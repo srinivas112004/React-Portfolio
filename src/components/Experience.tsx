@@ -5,6 +5,27 @@ export default function Experience() {
   const { theme } = useTheme();
   const experience = [
     {
+      title: 'Back End Developer',
+      company: 'Pegorion Software Solutions Pvt.Ltd',
+      logo: '/pegorion_logo.jpeg',
+      website: 'https://www.pegorion.com',
+      period: 'Oct 2025 – Present',
+      location: 'Remote India',
+      type: 'Internship',
+      responsibilities: [
+        'Developing and maintaining backend services and APIs for software solutions',
+        'Working on innovative products that enhance operational efficiency',
+        'Contributing to the transformation from traditional industry practices to advanced technology-driven solutions',
+        'Collaborating with cross-functional teams to deliver high-quality software products',
+        'Implementing scalable backend architectures and database solutions',
+      ],
+      achievements: [
+        'Contributing to flagship product development',
+        'Working on solutions that drive technological advancements across various sectors',
+        'Participating in the shift from Industry 3.0 to Industry 4.0',
+      ]
+    },
+    {
       title: 'AI & Tech Decentralized Intern',
       company: 'BlockseBlock in collaboration with (OpenxAI)',
       logo: '/blockseblock_logo.jpeg',
@@ -34,7 +55,7 @@ export default function Experience() {
           <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>Experience</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-6"></div>
           <p className={`text-xl max-w-3xl mx-auto leading-relaxed ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
-            Professional journey and hands-on experience in AI/ML and Web3 development
+            Professional journey and hands-on experience in Backend Development, AI/ML, and Web3 technologies
           </p>
         </div>
 
